@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./HRTheme.css";
 import Swal from "sweetalert2";
 
+
 function Navbar() {
     const location = useLocation();
     const navigate = useNavigate();
