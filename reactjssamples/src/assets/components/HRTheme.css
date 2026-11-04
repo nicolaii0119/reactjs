@@ -1,0 +1,331 @@
+
+:root {
+    --hr-red: #C72C41;
+    --hr-red-hover: #EE4540;
+    --hr-burgundy: #801336;
+    --hr-plum: #2D142C;
+    --hr-background: #F7F6F7;
+    --hr-border: #E8E3E7;
+    --hr-text: #302630;
+    --hr-muted: #756D76;
+    --hr-white: #FFFFFF;
+}
+
+
+
+body {
+    background: var(--hr-background);
+    color: var(--hr-text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hr-page {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 28px 24px;
+}
+
+.hr-page h1,
+.hr-page h2,
+.hr-page h3,
+.hr-page h4,
+.hr-page h5 {
+    color: var(--hr-plum);
+    font-weight: 600;
+    letter-spacing: -0.3px;
+}
+
+.hr-muted {
+    color: var(--hr-muted);
+}
+
+
+
+.hr-navbar {
+    background: var(--hr-plum);
+    min-height: 68px;
+    padding: 0 28px;
+}
+
+.hr-navbar .navbar-brand {
+    color: var(--hr-white);
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.hr-navbar .navbar-brand:hover {
+    color: var(--hr-white);
+}
+
+.hr-navbar .nav-link {
+    color: #F2EAF0;
+    font-size: 14px;
+    padding: 12px 15px;
+    transition: color 0.15s ease;
+}
+
+.hr-navbar .nav-link:hover,
+.hr-navbar .nav-link.active {
+    color: #FF7777;
+}
+
+.hr-navbar .navbar-toggler {
+    border-color: #806B7D;
+}
+
+.hr-navbar .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+.hr-card {
+    background: var(--hr-white);
+    border: 1px solid var(--hr-border);
+    border-radius: 9px;
+    box-shadow: 0 2px 6px rgba(45, 20, 44, 0.035);
+}
+
+.hr-card .card-body {
+    padding: 22px;
+}
+
+
+
+.btn-hr-primary {
+    color: var(--hr-white);
+    background: var(--hr-red);
+    border: 1px solid var(--hr-red);
+    border-radius: 6px;
+    padding: 9px 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-hr-primary:hover {
+    color: var(--hr-white);
+    background: var(--hr-red-hover);
+    border-color: var(--hr-red-hover);
+}
+
+.btn-hr-outline {
+    color: var(--hr-burgundy);
+    background: var(--hr-white);
+    border: 1px solid #D9C5D0;
+    border-radius: 6px;
+    padding: 8px 13px;
+    font-size: 13px;
+}
+
+.btn-hr-outline:hover {
+    color: var(--hr-plum);
+    background: #F5EEF2;
+    border-color: var(--hr-burgundy);
+}
+
+.btn-hr-edit {
+    color: var(--hr-burgundy);
+    background: var(--hr-white);
+    border: 1px solid #D9C5D0;
+}
+
+.btn-hr-edit:hover {
+    color: var(--hr-white);
+    background: var(--hr-burgundy);
+    border-color: var(--hr-burgundy);
+}
+
+
+.hr-page .form-control,
+.hr-page .form-select {
+    min-height: 40px;
+    border: 1px solid #DDD5DC;
+    border-radius: 6px;
+    font-size: 13px;
+    box-shadow: none;
+}
+
+.hr-page .form-control:focus,
+.hr-page .form-select:focus {
+    border-color: var(--hr-burgundy);
+    box-shadow: 0 0 0 3px rgba(128, 19, 54, 0.09);
+}
+
+
+
+.employee-table-wrapper {
+    width: 100%;
+    max-width: 100%;
+    max-height: 450px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid var(--hr-border);
+    border-radius: 6px;
+}
+
+.employee-table {
+    width: 100%;
+    min-width: 0;
+    table-layout: fixed;
+    margin-bottom: 0;
+    background: var(--hr-white);
+    font-size: 12px;
+}
+
+.employee-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    color: var(--hr-plum);
+    background: #F5F1F4;
+    border-bottom: 1px solid #DDD3DC;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.employee-table th,
+.employee-table td {
+    padding: 11px 7px;
+    vertical-align: middle;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    border-bottom: 1px solid #EEE9ED;
+}
+
+.employee-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.employee-table tbody tr:hover td {
+    background: #FAF7F9;
+}
+
+.employee-table .employee-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.employee-table .employee-actions .btn {
+    width: 100%;
+    padding: 6px 3px;
+    font-size: 11px;
+    line-height: 1.3;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    border-radius: 5px;
+}
+
+.employee-table .employee-actions .btn-outline-primary {
+    color: var(--hr-burgundy);
+    border-color: #D9C5D0;
+}
+
+.employee-table .employee-actions .btn-outline-primary:hover {
+    color: var(--hr-white);
+    background: var(--hr-burgundy);
+    border-color: var(--hr-burgundy);
+}
+
+.employee-table .employee-actions .btn-outline-danger {
+    color: var(--hr-red);
+    border-color: #E8B9C2;
+}
+
+.employee-table .employee-actions .btn-outline-danger:hover {
+    color: var(--hr-white);
+    background: var(--hr-red);
+    border-color: var(--hr-red);
+}
+
+.employee-table .employee-actions .btn-outline-success {
+    color: #26744C;
+    border-color: #B8DCC8;
+}
+
+.employee-table .employee-actions .btn-outline-success:hover {
+    color: var(--hr-white);
+    background: #26744C;
+    border-color: #26744C;
+}
+
+.employee-table .badge {
+    display: inline-block;
+    max-width: 100%;
+    padding: 5px 8px;
+    font-size: 10px;
+    font-weight: 600;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+.employee-table .badge.bg-success {
+    background: #26744C !important;
+}
+
+.employee-table .badge.bg-secondary {
+    background: #77717A !important;
+}
+
+
+.employee-table-wrapper {
+    scrollbar-width: thin;
+    scrollbar-color: #C7B8C4 #F5F1F4;
+}
+
+.employee-table-wrapper::-webkit-scrollbar {
+    width: 7px;
+}
+
+.employee-table-wrapper::-webkit-scrollbar-track {
+    background: #F5F1F4;
+}
+
+.employee-table-wrapper::-webkit-scrollbar-thumb {
+    background: #C7B8C4;
+    border-radius: 8px;
+}
+
+
+
+@media (max-width: 768px) {
+    .hr-navbar {
+        padding: 8px 15px;
+    }
+
+    .hr-navbar .navbar-brand {
+        font-size: 16px;
+    }
+
+    .hr-page {
+        padding: 18px 12px;
+    }
+
+    .hr-card .card-body {
+        padding: 15px;
+    }
+
+    .employee-table-wrapper {
+        max-height: 400px;
+    }
+
+    .employee-table {
+        font-size: 10px;
+    }
+
+    .employee-table th,
+    .employee-table td {
+        padding: 7px 3px;
+    }
+
+    .employee-table thead th {
+        font-size: 9px;
+    }
+
+    .employee-table .employee-actions .btn {
+        font-size: 9px;
+        padding: 5px 2px;
+    }
+
+    
+}
